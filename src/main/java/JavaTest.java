@@ -66,6 +66,7 @@ public class JavaTest {
 		URL url=new URL(url3);
 		
 		
+		
 			HttpURLConnection url2= (HttpURLConnection)url.openConnection();
 			url2.setConnectTimeout(500);
 			url2.connect();

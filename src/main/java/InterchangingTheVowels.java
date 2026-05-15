@@ -4,35 +4,36 @@ public class InterchangingTheVowels {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String a = "Triangle".toLowerCase();
+		String a="Triangle".toLowerCase();
 		
 		String vowels="aeiou";
 		
-		char b[]=a.toCharArray();
+		char c[]=a.toCharArray();
 		
 		int start=0;
-		int end=a.length()-1;
+		int last=a.length()-1;
 		
-		while(start<end) {
+		while(start<last) {
 			
-			while(start<end && !vowels.contains(b[start]+"")) {
+			while(start<last && !vowels.contains(c[start]+"")) {
 				start++;
 			}
-			while(start<end && !vowels.contains(b[end]+""))
-			{
-				end--;
+			
+			while(start<last && !vowels.contains(c[last]+"")) {
+				last--;
 			}
 			
-			char temp=b[start];
-			b[start]=b[end];
-			b[end]=temp;
+			char temp=c[start];
+			c[start]=c[last];
+			c[last]=temp;
 			
 			start++;
-			end--;
+			last--;
 		}
 		
-		System.out.println(new String(b));
-
+		for(int i=0;i<c.length;i++) {
+			System.out.print(c[i]);
+		}
 	}
 
 }

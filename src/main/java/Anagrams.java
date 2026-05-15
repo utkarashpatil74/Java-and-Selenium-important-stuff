@@ -4,30 +4,31 @@ public class Anagrams {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+	
+		String a="silent";
+		String b="listen";
 		
-		String s ="xctesh";
-		String t="aesvct";
-		
-		
-		if(s.length()!=t.length()) {
+		if(a.length()!=b.length()) {
 			System.out.println("Two strings are not anagrams");
+			return;
+			
+		}
+		
+		char[] c=a.toCharArray();
+		char[] d=b.toCharArray();
+		
+		Arrays.sort(c);
+		Arrays.sort(d);
+		
+		
+		
+		if(Arrays.equals(c,d)) {
+			System.out.println("Two strings are anagrams");
 		}
 		else {
-			
-			char b[]=s.toCharArray();
-			char c[]=t.toCharArray();
-			
-			Arrays.sort(b);
-			Arrays.sort(c);
-			
-			if(Arrays.equals(b,c)) {
-				System.out.println("Two Strings are anagrams");
-			}
-			else {
-				System.out.println("They are not anagrams");
-			}
+			System.out.println("They are not anagrams");
 		}
-
+		
 	}
 
 }
