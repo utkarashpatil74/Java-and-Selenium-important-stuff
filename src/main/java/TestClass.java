@@ -25,6 +25,10 @@ public class TestClass {
 		driver.get("https://www.tutorialspoint.com/selenium/practice/register.php");
 		driver.findElement(By.id("firstname")).sendKeys(fname);
 		driver.findElement(By.id("lastname")).sendKeys(lname);
+		
+
 	}
+	
+
 
 }

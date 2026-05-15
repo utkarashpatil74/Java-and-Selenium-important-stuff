@@ -25,7 +25,7 @@ public class ReadFromXcel {
 		
 		XSSFWorkbook workbook=new XSSFWorkbook(ip);
 		
-		XSSFSheet sheet=workbook.getSheet("register");
+		XSSFSheet sheet=workbook.getSheet(sheetName);
 		
 		int rows=sheet.getLastRowNum();
 		int column=sheet.getRow(0).getLastCellNum();
